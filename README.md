@@ -6,3 +6,7 @@ This project is still under development, feel free to contribute.
 
 ## Project
 This project is using [NestJS](https://nestjs.com/) see their docs for more information about CLI commands.
+
+## License
+
+[MIT](LICENSE)
