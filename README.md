@@ -1,5 +1,5 @@
 # dofus-api
-An open source GraphQL API for [Dofus](https://www.dofus.com/en).
+An open-source GraphQL API for [Dofus](https://www.dofus.com/en).
 
 ## Disclaimer
 This project is still under development, feel free to contribute.
