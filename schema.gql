@@ -1,0 +1,35 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Equipment {
+  name: String!
+  description: String!
+  conditions: [String!]!
+  imageUrl: String!
+  encyclopediaUrl: String!
+  level: Float!
+  type: String!
+  stats: [String!]!
+  recipe: [RecipeIngredient!]!
+}
+
+type Query {
+  getSets: [Set!]!
+}
+
+type RecipeIngredient {
+  name: String!
+  imageUrl: String!
+  amount: Float!
+}
+
+type Set {
+  name: String!
+  imageUrl: String!
+  encyclopediaUrl: String!
+  level: Float!
+  bonus: [String!]!
+  recipe: [RecipeIngredient!]!
+  items: [Equipment!]!
+}

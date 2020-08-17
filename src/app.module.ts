@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { GraphQLModule } from '@nestjs/graphql';
 import { ConfigModule } from '@nestjs/config';
 import { DatabaseModule } from './database/database.module';
+import { SetModule } from './set/set.module';
 
 @Module({
     imports: [
@@ -17,6 +18,7 @@ import { DatabaseModule } from './database/database.module';
             },
         }),
         DatabaseModule,
+        SetModule,
     ],
     controllers: [],
     providers: [],
