@@ -9,7 +9,6 @@ export class SetService {
     async getAll({ name, level }: SetArgs): Promise<Set[]> {
         const manager = getMongoManager();
         const match = mergeObjects({ name }, { level });
-        console.log(match);
 
         return await manager
             .aggregate(Set, [
