@@ -15,7 +15,7 @@ type Equipment {
 }
 
 type Query {
-  getSets: [Set!]!
+  getSets(name: String, level: Float): [Set!]!
 }
 
 type RecipeIngredient {

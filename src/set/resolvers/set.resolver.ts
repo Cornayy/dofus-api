@@ -1,13 +1,14 @@
 import { SetService } from '../set.service';
-import { Resolver, Query } from '@nestjs/graphql';
+import { Resolver, Query, Args } from '@nestjs/graphql';
 import { Set } from '../set.entity';
+import { SetArgs } from '../args/set.arg';
 
-@Resolver('Set')
+@Resolver(() => Set)
 export class SetResolver {
     constructor(private service: SetService) {}
 
     @Query(() => [Set])
-    async getSets(): Promise<Set[]> {
-        return await this.service.getAll();
+    async getSets(@Args() args: SetArgs): Promise<Set[]> {
+        return await this.service.getAll(args);
     }
 }
