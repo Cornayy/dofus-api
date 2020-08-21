@@ -1,3 +1,6 @@
+/**
+ * Merges objects together, this is used to merge optional arguments in GraphQL queries.
+ */
 export const mergeObjects = (
     ...objects: { [key: string]: string | number }[]
 ): { [key: string]: string | number } => {

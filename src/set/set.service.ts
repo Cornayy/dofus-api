@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { Set } from './set.entity';
 import { getMongoManager } from 'typeorm';
 import { SetArgs } from './args/set.arg';
-import { mergeObjects } from 'src/utils/util';
+import { mergeObjects } from '../utils/util';
 
 @Injectable()
 export class SetService {
