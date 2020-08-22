@@ -1,12 +1,12 @@
 import { Injectable } from '@nestjs/common';
 import { Set } from './set.entity';
 import { getMongoManager } from 'typeorm';
-import { SetArgs } from './args/set.arg';
+import { ItemArgs } from '../args/item.args';
 import { mergeObjects } from '../utils/util';
 
 @Injectable()
 export class SetService {
-    async getAll({ name, level }: SetArgs): Promise<Set[]> {
+    async getAll({ name, level }: ItemArgs): Promise<Set[]> {
         const manager = getMongoManager();
         const match = mergeObjects({ name }, { level });
 

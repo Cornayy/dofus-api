@@ -3,6 +3,7 @@ import { GraphQLModule } from '@nestjs/graphql';
 import { ConfigModule } from '@nestjs/config';
 import { DatabaseModule } from './database/database.module';
 import { SetModule } from './set/set.module';
+import { EquipmentModule } from './equipment/equipment.module';
 
 @Module({
     imports: [
@@ -19,6 +20,7 @@ import { SetModule } from './set/set.module';
         }),
         DatabaseModule,
         SetModule,
+        EquipmentModule,
     ],
     controllers: [],
     providers: [],
