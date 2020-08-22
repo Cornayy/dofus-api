@@ -3,6 +3,5 @@
  */
 export const mergeObjects = (...objects: { [key: string]: any }[]): { [key: string]: any } => {
     const objs = objects.filter(obj => Object.values(obj)[0] !== undefined);
-
     return objs.length > 0 ? objs.reduce((a, b) => ({ ...a, ...b })) : {};
 };
