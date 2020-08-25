@@ -1,7 +1,7 @@
 import { EquipmentService } from '../equipment.service';
 import { Resolver, Query, Args } from '@nestjs/graphql';
 import { Equipment } from '../equipment.entity';
-import { EquipmentArgs } from '../../args/equipment.args';
+import { EquipmentArgs } from '../../../args/equipment.args';
 
 @Resolver(() => Equipment)
 export class EquipmentResolver {

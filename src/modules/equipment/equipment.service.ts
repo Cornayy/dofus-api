@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { Equipment } from './equipment.entity';
-import { EquipmentArgs } from '../args/equipment.args';
-import { mergeObjects } from '../utils/util';
+import { EquipmentArgs } from '../../args/equipment.args';
+import { mergeObjects } from '../../utils/util';
 
 @Injectable()
 export class EquipmentService {

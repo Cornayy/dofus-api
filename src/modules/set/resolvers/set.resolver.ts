@@ -1,7 +1,7 @@
 import { SetService } from '../set.service';
 import { Resolver, Query, Args } from '@nestjs/graphql';
 import { Set } from '../set.entity';
-import { ItemArgs } from '../../args/item.args';
+import { ItemArgs } from '../../../args/item.args';
 
 @Resolver(() => Set)
 export class SetResolver {

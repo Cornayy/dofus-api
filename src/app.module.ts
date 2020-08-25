@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common';
 import { GraphQLModule } from '@nestjs/graphql';
 import { ConfigModule } from '@nestjs/config';
-import { DatabaseModule } from './database/database.module';
-import { SetModule } from './set/set.module';
-import { EquipmentModule } from './equipment/equipment.module';
+import { DatabaseModule } from './modules/database/database.module';
+import { SetModule } from './modules/set/set.module';
+import { EquipmentModule } from './modules/equipment/equipment.module';
 
 @Module({
     imports: [

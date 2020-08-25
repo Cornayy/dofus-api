@@ -1,24 +1,17 @@
+import { RecipeIngredient } from '../../types';
 import { Entity, ObjectID, ObjectIdColumn, Column, BaseEntity } from 'typeorm';
 import { Field, ObjectType } from '@nestjs/graphql';
-import { RecipeIngredient } from '../types';
+import { Equipment } from '../equipment/equipment.entity';
 
 @ObjectType()
 @Entity()
-export class Equipment extends BaseEntity {
+export class Set extends BaseEntity {
     @ObjectIdColumn()
     id: ObjectID;
 
     @Column()
     @Field()
     name: string;
-
-    @Column()
-    @Field()
-    description: string;
-
-    @Column()
-    @Field(() => [String])
-    conditions: string[];
 
     @Column()
     @Field()
@@ -33,14 +26,13 @@ export class Equipment extends BaseEntity {
     level: number;
 
     @Column()
-    @Field()
-    type: string;
-
-    @Column()
     @Field(() => [String])
-    stats: string[];
+    bonus: string[];
 
     @Column()
     @Field(() => [RecipeIngredient])
     recipe: RecipeIngredient[];
+
+    @Field(() => [Equipment])
+    items: Equipment[];
 }
