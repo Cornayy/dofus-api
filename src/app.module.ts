@@ -4,6 +4,7 @@ import { ConfigModule } from '@nestjs/config';
 import { DatabaseModule } from './modules/database/database.module';
 import { SetModule } from './modules/set/set.module';
 import { EquipmentModule } from './modules/equipment/equipment.module';
+import { WeaponModule } from './modules/weapon/weapon.module';
 
 @Module({
     imports: [
@@ -21,6 +22,7 @@ import { EquipmentModule } from './modules/equipment/equipment.module';
         DatabaseModule,
         SetModule,
         EquipmentModule,
+        WeaponModule,
     ],
     controllers: [],
     providers: [],
