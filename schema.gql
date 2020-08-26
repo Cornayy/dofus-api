@@ -17,12 +17,23 @@ type Equipment {
 type Query {
   getSets(name: String, level: Float): [Set!]!
   getEquipment(name: String, level: Float, type: String): [Equipment!]!
+  getWeapons(name: String, level: Float): [Weapon!]!
+  getResources: [Resource!]!
 }
 
 type RecipeIngredient {
   name: String!
   imageUrl: String!
   amount: Float!
+}
+
+type Resource {
+  name: String!
+  description: String!
+  imageUrl: String!
+  encyclopediaUrl: String!
+  level: Float!
+  type: String!
 }
 
 type Set {
@@ -33,4 +44,16 @@ type Set {
   bonus: [String!]!
   recipe: [RecipeIngredient!]!
   items: [Equipment!]!
+}
+
+type Weapon {
+  type: String!
+  name: String!
+  description: String!
+  imageUrl: String!
+  encyclopediaUrl: String!
+  level: Float!
+  stats: [String!]!
+  conditions: [String!]!
+  recipe: [RecipeIngredient!]!
 }

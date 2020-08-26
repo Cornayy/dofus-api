@@ -5,6 +5,7 @@ import { DatabaseModule } from './modules/database/database.module';
 import { SetModule } from './modules/set/set.module';
 import { EquipmentModule } from './modules/equipment/equipment.module';
 import { WeaponModule } from './modules/weapon/weapon.module';
+import { ResourceModule } from './modules/resource/resource.module';
 
 @Module({
     imports: [
@@ -23,8 +24,7 @@ import { WeaponModule } from './modules/weapon/weapon.module';
         SetModule,
         EquipmentModule,
         WeaponModule,
+        ResourceModule,
     ],
-    controllers: [],
-    providers: [],
 })
 export class AppModule {}
