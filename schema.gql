@@ -2,6 +2,28 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
+type Ceremonial {
+  name: String!
+  description: String!
+  imageUrl: String!
+  encyclopediaUrl: String!
+  level: Float!
+  type: String!
+  set: String!
+  stats: [String!]!
+}
+
+type Consumable {
+  name: String!
+  description: String!
+  imageUrl: String!
+  encyclopediaUrl: String!
+  level: Float
+  type: String!
+  stats: [String!]!
+  conditions: [String!]!
+}
+
 type Equipment {
   name: String!
   description: String!
@@ -31,6 +53,8 @@ type Query {
   getWeapons(name: String, level: Float): [Weapon!]!
   getResources: [Resource!]!
   getPets(name: String, level: Float, type: String): [Pet!]!
+  getCeremonials(name: String, level: Float, type: String): [Ceremonial!]!
+  getConsumables(name: String, level: Float, type: String): [Consumable!]!
 }
 
 type RecipeIngredient {

@@ -7,6 +7,8 @@ import { EquipmentModule } from './modules/equipment/equipment.module';
 import { WeaponModule } from './modules/weapon/weapon.module';
 import { ResourceModule } from './modules/resource/resource.module';
 import { PetModule } from './modules/pet/pet.module';
+import { CeremonialModule } from './modules/ceremonial/ceremonial.module';
+import { ConsumableModule } from './modules/consumable/consumable.module';
 
 @Module({
     imports: [
@@ -27,6 +29,8 @@ import { PetModule } from './modules/pet/pet.module';
         WeaponModule,
         ResourceModule,
         PetModule,
+        CeremonialModule,
+        ConsumableModule,
     ],
 })
 export class AppModule {}
