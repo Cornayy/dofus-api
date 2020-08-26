@@ -9,6 +9,9 @@ import { ResourceModule } from './modules/resource/resource.module';
 import { PetModule } from './modules/pet/pet.module';
 import { CeremonialModule } from './modules/ceremonial/ceremonial.module';
 import { ConsumableModule } from './modules/consumable/consumable.module';
+import { IdolModule } from './modules/idol/idol.module';
+import { MonsterModule } from './modules/monster/monster.module';
+import { MountModule } from './modules/mount/mount.module';
 
 @Module({
     imports: [
@@ -31,6 +34,11 @@ import { ConsumableModule } from './modules/consumable/consumable.module';
         PetModule,
         CeremonialModule,
         ConsumableModule,
+        IdolModule,
+        MonsterModule,
+        MountModule,
+        IdolModule,
+        MonsterModule,
     ],
 })
 export class AppModule {}

@@ -36,6 +36,36 @@ type Equipment {
   recipe: [RecipeIngredient!]!
 }
 
+type Idol {
+  name: String!
+  difficultyScore: Float!
+  description: String!
+  bonus: [String!]!
+  imageUrl: String!
+  encyclopediaUrl: String!
+  level: Float!
+  type: String!
+  spells: String!
+}
+
+type Monster {
+  name: String!
+  family: String!
+  imageUrl: String!
+  encyclopediaUrl: String!
+  level: String!
+  characteristics: [String!]!
+  resistances: [String!]!
+  areas: [String!]!
+  drops: [MonsterDrop!]!
+}
+
+type MonsterDrop {
+  name: String!
+  imageUrl: String!
+  chance: String!
+}
+
 type Pet {
   name: String!
   description: String!
@@ -55,6 +85,8 @@ type Query {
   getPets(name: String, level: Float, type: String): [Pet!]!
   getCeremonials(name: String, level: Float, type: String): [Ceremonial!]!
   getConsumables(name: String, level: Float, type: String): [Consumable!]!
+  getIdols(name: String, level: Float, type: String): [Idol!]!
+  getMonsters(name: String, level: Float): [Monster!]!
 }
 
 type RecipeIngredient {

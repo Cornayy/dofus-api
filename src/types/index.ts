@@ -11,3 +11,15 @@ export class RecipeIngredient {
     @Field()
     amount: number;
 }
+
+@ObjectType()
+export class MonsterDrop {
+    @Field()
+    name: string;
+
+    @Field()
+    imageUrl: string;
+
+    @Field()
+    chance: string;
+}
