@@ -6,6 +6,7 @@ import { SetModule } from './modules/set/set.module';
 import { EquipmentModule } from './modules/equipment/equipment.module';
 import { WeaponModule } from './modules/weapon/weapon.module';
 import { ResourceModule } from './modules/resource/resource.module';
+import { PetModule } from './modules/pet/pet.module';
 
 @Module({
     imports: [
@@ -25,6 +26,7 @@ import { ResourceModule } from './modules/resource/resource.module';
         EquipmentModule,
         WeaponModule,
         ResourceModule,
+        PetModule,
     ],
 })
 export class AppModule {}

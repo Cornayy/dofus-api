@@ -14,11 +14,23 @@ type Equipment {
   recipe: [RecipeIngredient!]!
 }
 
+type Pet {
+  name: String!
+  description: String!
+  imageUrl: String!
+  encyclopediaUrl: String!
+  level: Float!
+  type: String!
+  conditions: [String!]!
+  stats: [String!]!
+}
+
 type Query {
   getSets(name: String, level: Float): [Set!]!
   getEquipment(name: String, level: Float, type: String): [Equipment!]!
   getWeapons(name: String, level: Float): [Weapon!]!
   getResources: [Resource!]!
+  getPets(name: String, level: Float, type: String): [Pet!]!
 }
 
 type RecipeIngredient {
