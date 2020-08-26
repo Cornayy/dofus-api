@@ -39,6 +39,7 @@ import { MountModule } from './modules/mount/mount.module';
         MountModule,
         IdolModule,
         MonsterModule,
+        MountModule,
     ],
 })
 export class AppModule {}

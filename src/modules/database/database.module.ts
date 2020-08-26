@@ -9,6 +9,8 @@ import { Weapon } from '../weapon/weapon.entity';
 import { Consumable } from '../consumable/consumable.entity';
 import { Idol } from '../idol/idol.entity';
 import { Set } from '../set/set.entity';
+import { Mount } from '../mount/mount.entity';
+import { Monster } from '../monster/monster.entity';
 
 @Module({
     imports: [
@@ -33,6 +35,8 @@ import { Set } from '../set/set.entity';
             Weapon,
             Consumable,
             Idol,
+            Mount,
+            Monster,
         ]),
     ],
 })

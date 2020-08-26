@@ -66,6 +66,15 @@ type MonsterDrop {
   chance: String!
 }
 
+type Mount {
+  name: String!
+  imageUrl: String!
+  encyclopediaUrl: String!
+  type: String!
+  stats: [String!]!
+  characteristics: [String!]!
+}
+
 type Pet {
   name: String!
   description: String!
@@ -87,6 +96,7 @@ type Query {
   getConsumables(name: String, level: Float, type: String): [Consumable!]!
   getIdols(name: String, level: Float, type: String): [Idol!]!
   getMonsters(name: String, level: Float): [Monster!]!
+  getMounts(name: String): [Mount!]!
 }
 
 type RecipeIngredient {
