@@ -1,11 +1,11 @@
 import { Injectable } from '@nestjs/common';
-import { EquipmentArgs } from 'src/args/equipment.args';
 import { Consumable } from './consumable.entity';
 import { mergeObjects } from '../../utils/util';
+import { ConsumableArgs } from '../../args/consumable.args';
 
 @Injectable()
 export class ConsumableService {
-    async getAll({ name, level, type }: EquipmentArgs): Promise<Consumable[]> {
+    async getAll({ name, level, type }: ConsumableArgs): Promise<Consumable[]> {
         const match = mergeObjects({ name }, { level }, { type });
         return await Consumable.find({ ...match });
     }

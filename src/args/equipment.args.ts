@@ -1,8 +1,9 @@
 import { ArgsType, Field } from '@nestjs/graphql';
 import { ItemArgs } from './item.args';
+import { EquipmentType } from '../types';
 
 @ArgsType()
 export class EquipmentArgs extends ItemArgs {
-    @Field({ nullable: true })
-    type?: string;
+    @Field(() => EquipmentType, { nullable: true })
+    type?: EquipmentType;
 }
