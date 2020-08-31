@@ -18,9 +18,7 @@ import { Monster } from '../monster/monster.entity';
             imports: [ConfigModule],
             useFactory: async () => ({
                 type: process.env.TYPE as any,
-                host: process.env.HOST as any,
-                port: process.env.PORT as any,
-                database: process.env.DB_NAME as any,
+                url: `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@dev-cluster.bsmvv.mongodb.net/${process.env.DB_NAME}` as any,
                 synchronize: true,
                 autoLoadEntities: true,
                 useUnifiedTopology: true,
