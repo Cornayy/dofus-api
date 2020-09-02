@@ -11,7 +11,9 @@ Create a .env file in the root of your project, a typical .env should look like 
 TYPE=mongodb
 HOST=localhost
 PORT=27017
-DB_NAME=dofus-scraper
+DB_NAME=dofus-api
+DB_USER=dofus-api
+DB_PASSWORD=password
 ```
 ## License
 
