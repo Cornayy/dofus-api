@@ -12,9 +12,14 @@ import { ConsumableModule } from './modules/consumable/consumable.module';
 import { IdolModule } from './modules/idol/idol.module';
 import { MonsterModule } from './modules/monster/monster.module';
 import { MountModule } from './modules/mount/mount.module';
+import { ServeStaticModule } from '@nestjs/serve-static';
+import { join } from 'path';
 
 @Module({
     imports: [
+        ServeStaticModule.forRoot({
+            rootPath: join(__dirname, '..', 'public'),
+        }),
         ConfigModule.forRoot(),
         GraphQLModule.forRoot({
             debug: false,
