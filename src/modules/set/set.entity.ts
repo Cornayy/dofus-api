@@ -14,8 +14,8 @@ export class Set extends BaseEntity {
     name: string;
 
     @Column()
-    @Field()
-    imageUrl: string;
+    @Field({ nullable: true })
+    imageUrl?: string;
 
     @Column()
     @Field()
